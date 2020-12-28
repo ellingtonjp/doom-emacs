@@ -153,7 +153,6 @@ more information on modifiers."
     (unless evil-split-window-below
       (select-window origwin))
     (run-hooks 'doom-switch-window-hook))
-  (recenter)
   (when (and (not count) evil-auto-balance-windows)
     (balance-windows (window-parent)))
   (if file (evil-edit file)))
@@ -173,7 +172,6 @@ more information on modifiers."
       (select-window origwin))
     (run-hooks 'doom-switch-window-hook))
   (run-hooks)
-  (recenter)
   (when (and (not count) evil-auto-balance-windows)
     (balance-windows (window-parent)))
   (if file (evil-edit file)))
